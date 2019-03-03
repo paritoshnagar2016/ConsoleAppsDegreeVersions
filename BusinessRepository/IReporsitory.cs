@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace BusinessEntity
+namespace BusinessRepository
 {
     public interface IReporsitory<T> where T : class
     {

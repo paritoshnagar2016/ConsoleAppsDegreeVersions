@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BusinessEntity.EmployeeRepository
+namespace BusinessRepository.EmpRepository
 {
     public interface IEmployeeRepository : IReporsitory<EmployeeModel>
     {

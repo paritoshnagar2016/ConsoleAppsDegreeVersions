@@ -1,15 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Text;
+using System.Linq;
 
-namespace BusinessEntity
+namespace BusinessRepository
 {
     public abstract class RepositoryBase<T> : IReporsitory<T> where T:class
     {
-        DbContext _dbContext = null;
+        AppDbContext _dbContext = null;
         protected DbSet<T> _dbSet = null;
-        public RepositoryBase(DbContext dbContext)
+        public RepositoryBase(AppDbContext dbContext)
         {
             _dbContext = dbContext;
             _dbSet = dbContext.Set<T>();
@@ -26,7 +28,7 @@ namespace BusinessEntity
 
         public IEnumerable<T> GetAll()
         {
-            return _dbSet.ToListAsync().Result;
+            return _dbSet.ToList<T>();
         }    
         
     }
