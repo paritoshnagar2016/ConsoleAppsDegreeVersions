@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ConsoleAppsDegreeVersions": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "CONNECTION_STRING": "Server=LAPTOP-ANUPARI;Database=taBase;Trusted_Connection=True;"
+      }
+    }
+  }
+}
